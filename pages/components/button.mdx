@@ -1,0 +1,181 @@
+---
+title: Button
+---
+
+import Image from "next/image";
+
+# Button Variants
+
+The `Button` component in **sidcn** supports various visual styles, or variants. Each variant comes with its own background color to provide a distinct look. Here's a detailed explanation of each variant:
+
+
+
+
+
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Button/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Button/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+
+</div>
+
+## Import Button
+
+The primary variant is designed for the main action or call-to-action buttons.
+
+```jsx copy
+import { Button } from 'sidcn'
+```
+### Primary Variant
+
+The primary variant is designed for the main action or call-to-action buttons.
+
+```jsx copy
+<Button variant="primary" />
+```
+
+Background Color: `#000000`
+
+### Secondary Variant
+
+The secondary variant is suitable for secondary actions or buttons with less emphasis.
+
+```jsx copy
+<Button variant="secondary" />
+```
+
+Background Color: `#f1f1f3`
+
+### Destructive Variant
+
+The destructive variant is ideal for buttons indicating potentially harmful actions.
+
+```jsx copy
+<Button variant="destructive" />
+```
+
+Background Color: `#d10e1d`
+
+### Outline Variant
+
+The outline variant provides a button with a transparent background and a visible border.
+
+```jsx copy
+<Button variant="outline" />
+```
+
+Background Color: `#fff`
+
+#### Link Variant
+
+The link variant is suitable for text-like buttons, resembling hyperlinks.
+
+```jsx
+<Button variant="link" />
+```
+
+## Class Name
+
+- Applies Tailwind CSS classes to control both text and button style properties.
+
+- For the `Button` component, you can use Tailwind CSS classes that map to the following styles:
+
+```jsx
+<Button
+  variant="primary"
+  className="px-8 my-4 border border-[#ff0000] text-[20px]"
+  onPress={() => {}}
+>
+  Press Me
+</Button>
+```
+
+## Button Props
+
+The `Button` component in **sidcn** accepts a variety of props to provide flexibility and customization. Here's an explanation of each prop:
+
+### Common Props
+
+- **`children?: React.ReactNode | undefined;`**
+
+  - Content to be rendered inside the button.
+
+- **`disabled?: boolean | undefined;`**
+
+  - If true, disables all interactions for this component.
+
+- **`style?: StyleProp<ViewStyle> | undefined;`**
+
+  - Style object to customize the button's appearance.
+
+- **`testID?: string | undefined;`**
+  - Used to locate this view in end-to-end tests.
+
+### Touch Handling Props
+
+- **`delayLongPress?: number | undefined;`**
+
+  - Delay in milliseconds, from onPressIn, before onLongPress is called.
+
+- **`delayPressIn?: number | undefined;`**
+
+  - Delay in milliseconds, from the start of the touch, before onPressIn is called.
+
+- **`delayPressOut?: number | undefined;`**
+
+  - Delay in milliseconds, from the release of the touch, before onPressOut is called.
+
+- **`hitSlop?: null | Insets | number | undefined;`**
+
+  - Defines how far your touch can start away from the button.
+
+- **`pressRetentionOffset?: null | Insets | number | undefined;`**
+  - When the scroll view is disabled, this defines how far your touch may move off the button before deactivating the button.
+
+### Event Handling Props
+
+- **`onBlur?: ((e: NativeSyntheticEvent<{ TargetedEvent }>) => void) | undefined;`**
+
+  - Invoked when the element loses focus.
+
+- **`onFocus?: ((e: NativeSyntheticEvent<{ TargetedEvent }>) => void) | undefined;`**
+
+  - Invoked when the element gains focus.
+
+- **onLayout?: ((event: LayoutChangeEvent) => void) | undefined;**
+
+  - Invoked on mount and layout changes with nativeEvent containing layout information.
+
+- **`onLongPress?: ((event: GestureResponderEvent) => void) | undefined;`**
+
+  - Called when a long press gesture is detected.
+
+- **`onPress?: ((event: GestureResponderEvent) => void) | undefined;`**
+
+  - Called when the touch is released, but not if cancelled.
+
+- **`onPressIn?: ((event: GestureResponderEvent) => void) | undefined;`**
+
+  - Invoked when a touch is started.
+
+- **`onPressOut?: ((event: GestureResponderEvent) => void) | undefined;`**
+  - Invoked when a touch is released, but not if cancelled.
+
+These props provide fine-grained control over the button's behavior and appearance, allowing you to tailor the button to your specific requirements.
+
+```
+
+```

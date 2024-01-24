@@ -1,0 +1,74 @@
+---
+title: Expo
+---
+
+# Installing sidcn for Expo
+
+## 1. Create the project
+
+```bash copy
+npx create-expo-app my-app
+cd my-app
+```
+
+## 2. Install sidcn
+
+```bash copy
+yarn add sidcn
+```
+You will need to install nativewind and its peer dependency tailwindcss.
+
+```bash copy
+yarn add nativewind
+yarn add --dev tailwindcss@3.3.2
+```
+
+## 3. Setup Tailwind CSS
+
+Run the following command to create a tailwind.config.js file:
+
+```bash
+npx tailwindcss init
+```
+Add the paths to all of your component files in your tailwind.config.js file.
+
+`tailwind.config.js`
+
+```js
+const path = require('path');
+const modulePath = require.resolve('sidcn/package.json');
+const packageDirectory = path.dirname(modulePath);
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // Example app's own components
+    './src/**/*.{js,jsx,ts,tsx}',
+    // Connect to sidcn
+    `${packageDirectory}/src/**/*.{js,jsx,ts,tsx}`,
+  ],
+
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+```
+## 4. Add the Babel plugin
+
+Modify your babel.config.js file:
+
+`babel.config.js`
+```js
+javascript
+
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: ["nativewind/babel"],
+};
+```
+
+That's it! 🎉
+You are now ready to start writing code using sidcn in your React Native CLI project.
