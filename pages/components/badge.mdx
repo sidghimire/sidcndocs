@@ -1,0 +1,98 @@
+---
+title: Badge
+---
+
+import Image from "next/image";
+
+# Badge Variants
+
+The `Badge` component in **sidcn** supports various visual styles, or variants. Each variant comes with its own background color to provide a distinct look. Here's a detailed explanation of each variant:
+
+
+
+
+
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Badge/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Badge/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+
+</div>
+
+## Import Badge
+
+
+```jsx copy
+import { Badge } from 'sidcn'
+```
+### Primary Variant
+
+
+```jsx copy
+<Badge variant="primary" />
+```
+
+Background Color: `#000000`
+
+### Secondary Variant
+
+
+```jsx copy
+<Badge variant="secondary" />
+```
+
+Background Color: `#f1f1f3`
+
+### Destructive Variant
+
+
+```jsx copy
+<Badge variant="destructive" />
+```
+
+Background Color: `#d10e1d`
+
+### Outline Variant
+
+
+```jsx copy
+<Badge variant="outline" />
+```
+
+Background Color: `#fff`
+
+#### Link Variant
+
+
+```jsx
+<Badge variant="link" />
+```
+
+## Class Name
+
+- Applies Tailwind CSS classes to control both text and Badge style properties.
+
+- For the `Badge` component, you can use Tailwind CSS classes that map to the following styles:
+
+```jsx
+<Badge
+  variant="primary"
+  className="px-8 my-4 border border-[#ff0000] text-[20px]"
+  onPress={() => {}}
+>
+  Press Me
+</Badge>
+```
