@@ -1,0 +1,90 @@
+---
+title: Accordion
+---
+
+import Image from "next/image";
+
+# Accordion Variants
+
+The `Accordion` component in **sidcn** allows you to create interactive accordion sections within your React Native and Expo applications. With easy-to-use components, you can display and organize content in a collapsible manner, enhancing user experience.
+
+
+
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Accordion/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Accordion/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+
+</div>
+
+## Import Accordion
+
+The primary variant is designed for the main action or call-to-action buttons.
+
+```jsx copy
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from 'sidcn';
+```
+
+### How to use
+
+Create individual accordion items with triggers and content.
+
+```jsx copy
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger>
+      Open Accordion 1
+    </AccordionTrigger>
+    <AccordionContent>
+      This is accordion detail
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionTrigger>
+      Open Accordion 2
+    </AccordionTrigger>
+    <AccordionContent>
+      This is accordion detail
+    </AccordionContent>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionTrigger>
+      Open Accordion 3
+    </AccordionTrigger>
+    <AccordionContent>
+      This is accordion detail
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+```
+
+`Use with className`
+
+```jsx copy
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger className="bg-blue-500 text-white p-2 cursor-pointer">
+      Custom Accordion Trigger
+    </AccordionTrigger>
+    <AccordionContent className="bg-gray-200 p-4">
+      This is customized accordion detail
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
