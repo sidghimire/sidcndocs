@@ -1,0 +1,75 @@
+---
+title: Card
+---
+
+import Image from "next/image";
+
+# Card Component
+
+The `Card` component in **sidcn** is a versatile container that allows you to organize and present information in a structured and visually appealing way. With customizable components like `CardHeader`, `CardContent`, and `CardFooter`, you can create engaging and responsive card layouts for your React Native and Expo applications.
+
+
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Card/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Card/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+
+</div>
+
+## Import Card
+
+Get started with the `Card` component by importing it from **sidcn**.
+```jsx copy
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from 'sidcn';
+```
+### How to use
+
+Create a card with various components such as `CardHeader`, `CardContent`, and `CardFooter`.
+
+```jsx copy
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card Description</CardDescription>
+  </CardHeader>
+  <CardContent>
+    Card Content
+  </CardContent>
+  <CardFooter>
+    Card Footer
+  </CardFooter>
+</Card>
+```
+
+`Use with className`
+
+```jsx copy
+<Card className="w-full">
+  <CardHeader>
+    <CardTitle className='text-[20px]'>Card Title</CardTitle>
+    <CardDescription className='text-[10px]'>Card Description</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <View className="flex flex-row space-x-2">
+      <Badge>Primary</Badge>
+      <Badge variant="destructive">Destructive</Badge>
+    </View>
+  </CardContent>
+  <CardFooter className="flex flex-row">
+    <Button variant="primary" className='w-full h-10'>Click me</Button>
+  </CardFooter>
+</Card>
+```
