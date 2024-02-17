@@ -1,10 +1,10 @@
 ---
-title: Input
+title: Label
 ---
 
 import Image from "next/image";
 
-# Input 
+# Label 
 
 {/*
 <div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
@@ -27,31 +27,28 @@ import Image from "next/image";
 </div>
 */}
 
-## Add Input
+## Add Label
 
 
 ```jsx copy
-npx sidcn add input
+npx sidcn add label
 ```
 
-## Import Input
+## Import Label
 
 
 ```jsx copy
-import { Input } from '/components/sidcn/ui';
+import { Label } from '/components/sidcn/ui';
 ```
 ### How to use
 
 
 ```jsx copy
-<Input type="Password" placeholder="Password" />
+<Label>Hi</Label>
 ```
 
 `Use with className`
 
 ```jsx copy
-<View className="w-full">
-    <Label>Hi</Label>
-    <Input type="Password" placeholder="Password" className="p-4" />
-</View>
+<Label className='text-[24px]'>Hi</Label>   
 ```
