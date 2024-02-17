@@ -4,7 +4,7 @@ title: Alert
 
 import Image from "next/image";
 
-# Button Variants
+# Alert Variants
 
 The `Alert` component in **sidcn** is your go-to solution for displaying attention-grabbing alerts in your React Native and Expo applications. With a variety of variants to choose from, it seamlessly integrates into your app, making sure your users stay informed and engaged.
 
@@ -30,13 +30,20 @@ The `Alert` component in **sidcn** is your go-to solution for displaying attenti
 
 
 </div>
+## Add Alert
+
+The primary variant is designed for the main action or call-to-action buttons.
+
+```jsx copy
+npx sidcn add alert
+```
 
 ## Import Alert
 
 The primary variant is designed for the main action or call-to-action buttons.
 
 ```jsx copy
-import { Alert, AlertTitle, AlertDescription } from 'sidcn';
+import { Alert, AlertTitle, AlertDescription } from '/components/sidcn/ui';
 ```
 ### How to use
 
@@ -73,19 +80,6 @@ The primary variant is designed for the main action or call-to-action buttons.
 </Alert>
 ```
 
-
-### Secondary Variant
-
-The secondary variant is suitable for secondary actions or buttons with less emphasis.
-
-```jsx copy
-<Alert variant="secondary">
-  <AlertTitle>Alert Secondary</AlertTitle>
-  <AlertDescription>Alert Description</AlertDescription>
-</Alert>
-```
-
-
 ### Destructive Variant
 
 The destructive variant is ideal for buttons indicating potentially harmful actions.
@@ -93,18 +87,6 @@ The destructive variant is ideal for buttons indicating potentially harmful acti
 ```jsx copy
 <Alert variant="destructive">
   <AlertTitle>Alert Destructive</AlertTitle>
-  <AlertDescription>Alert Description</AlertDescription>
-</Alert>
-```
-
-
-### Outline Variant
-
-The outline variant provides a button with a transparent background and a visible border.
-
-```jsx copy
- <Alert variant="outline">
-  <AlertTitle>Alert Outline</AlertTitle>
   <AlertDescription>Alert Description</AlertDescription>
 </Alert>
 ```
