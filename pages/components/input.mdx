@@ -1,0 +1,58 @@
+---
+title: Input
+---
+
+import Image from "next/image";
+
+# Input Variants
+
+{/*
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Alert/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Alert/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+</div>
+*/}
+
+## Add Input
+
+
+```jsx copy
+npx sidcn add input
+```
+
+## Import Input
+
+
+```jsx copy
+import { Input } from '/components/sidcn/ui';
+```
+### How to use
+
+You can have Icon | Image | View | Text | Svg Component for Icon Purpose, Alert Title and Alert Description
+
+```jsx copy
+<Input type="Password" placeholder="Password" />
+```
+
+`Use with className`
+
+```jsx copy
+<View className="w-full">
+    <Label>Hi</Label>
+    <Input type="Password" placeholder="Password" className="p-4" />
+</View>
+```
