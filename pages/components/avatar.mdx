@@ -1,10 +1,10 @@
 ---
-title: Input
+title: Avatar
 ---
 
 import Image from "next/image";
 
-# Input 
+# Avatar 
 
 {/*
 <div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
@@ -27,31 +27,29 @@ import Image from "next/image";
 </div>
 */}
 
-## Add Input
+## Add Avatar
 
 
 ```jsx copy
-npx sidcn add input
+npx sidcn add avatar
 ```
 
 ## Import Input
 
 
 ```jsx copy
-import { Input } from '/components/sidcn/ui/input';
+import {Avatar, AvatarFallback, AvatarImage} from '/components/sidcn/ui/avatar';
 ```
 ### How to use
 
-
 ```jsx copy
-<Input type="Password" placeholder="Password" />
-```
-
-`Use with className`
-
-```jsx copy
-<View className="w-full">
-    <Label>Hi</Label>
-    <Input type="Password" placeholder="Password" className="p-4" />
-</View>
+<Avatar className="ml-auto">
+  <AvatarImage
+    source={{
+      uri: "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg",
+    }}
+    className=""
+  />
+  <AvatarFallback className="">CN</AvatarFallback>
+</Avatar>
 ```

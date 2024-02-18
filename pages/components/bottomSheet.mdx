@@ -1,10 +1,10 @@
 ---
-title: Input
+title: Bottom Sheet
 ---
 
 import Image from "next/image";
 
-# Input 
+# Bottom Sheet 
 
 {/*
 <div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
@@ -27,31 +27,27 @@ import Image from "next/image";
 </div>
 */}
 
-## Add Input
+## Add BottomSheet
 
 
 ```jsx copy
-npx sidcn add input
+npx sidcn add bottomsheet
 ```
 
-## Import Input
+## Import Bottom Sheet
 
 
 ```jsx copy
-import { Input } from '/components/sidcn/ui/input';
+import { BottomSheet, BottomSheetContent, BottomSheetTrigger, } from '/components/sidcn/ui/bottomsheet';
 ```
 ### How to use
 
 
 ```jsx copy
-<Input type="Password" placeholder="Password" />
-```
-
-`Use with className`
-
-```jsx copy
-<View className="w-full">
-    <Label>Hi</Label>
-    <Input type="Password" placeholder="Password" className="p-4" />
-</View>
+<BottomSheet>
+  <BottomSheetTrigger>Open Bottom Sheet 1</BottomSheetTrigger>
+  <BottomSheetContent>
+    <Text>This Bottom Sheet</Text>
+  </BottomSheetContent>
+</BottomSheet>
 ```
