@@ -1,0 +1,54 @@
+---
+title: Checkbox
+---
+
+import Image from "next/image";
+
+# Checkbox 
+
+{/*
+<div style={{ display: "flex", flexDirection: "row",marginTop:40}}>
+  <Image
+    src="/assets/components/Alert/Frame.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginLeft:'auto',marginRight:10}}
+  />
+  <Image
+    src="/assets/components/Alert/Frame-1.svg"
+    alt="Hello"
+    width={250}
+    height={250}
+    style={{marginRight:'auto',marginLeft:10}}
+
+/>
+
+</div>
+*/}
+
+## Add Checkbox
+
+
+```jsx copy
+npx sidcn add checkbox
+```
+
+## Import Input
+
+
+```jsx copy
+import { Checkbox } from '/components/sidcn/ui/checkbox';
+```
+### How to use
+
+
+```jsx copy
+<Checkbox disabled={false} value={} onValueChange={} />
+```
+
+`Example`
+
+```jsx copy
+<Checkbox disabled={false} value={toggle} onValueChange={setToggle} />
+```
